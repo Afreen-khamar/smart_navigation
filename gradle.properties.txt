@@ -1,0 +1,2 @@
+systemProp.java.net.preferIPv4Stack=true
+systemProp.java.net.preferIPv4Addresses=true
