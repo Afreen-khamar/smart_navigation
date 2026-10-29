@@ -178,12 +178,10 @@ Actual results should be recorded after testing the implemented features.
 
 ## 👥 Contributors
 
-- **Afreen Khamar** — Project repository owner
-- Additional contributors: Add team members here, if applicable.
+- **Afreen Khamar** 
+- **Sureekaa Natarajan**
+- **Deepika Murugan**
 
-## 📄 License
-
-No license information is specified in this README. Add a `LICENSE` file and update this section if you intend to distribute the project under an open-source license.
 
 ## 🙌 Acknowledgements
 
