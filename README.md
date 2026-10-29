@@ -65,64 +65,220 @@ These components work together to provide an accessible navigation experience.
 
 ## 🚀 Getting Started
 
-### Prerequisites
+## 📋 Prerequisites
 
-Install the tools and dependencies required by your implementation.
+Before running the project, install the following:
 
-- Git
-- The programming language runtime used by the project
-- A suitable code editor, such as Visual Studio Code
-- Required project libraries, APIs, and configuration files
+Flutter SDK
 
-### Installation
+Dart SDK (included with Flutter)
 
-**1. Clone the repository**
+Android Studio or Visual Studio Code
 
-```bash
+Android SDK and platform tools
+
+Git
+
+An Android phone or emulator
+
+Verify the Flutter installation:
+
+flutter doctor -v
+
+Resolve the relevant setup issues reported by Flutter before proceeding.
+
+## 📂 Project Setup
+
+Step 1: Clone the Repository
+
 git clone https://github.com/Afreen-khamar/smart_navigation.git
-```
 
-**2. Navigate to the project directory**
+Step 2: Open the Project Folder
 
-```bash
 cd smart_navigation
-```
 
-**3. Install dependencies**
+Step 3: Download Dependencies
 
-Use the installation command appropriate for your project.
+flutter pub get
 
-For a Python project:
+This command downloads the dependencies specified in pubspec.yaml.
 
-```bash
-pip install -r requirements.txt
-```
+Step 4: Check Connected Devices
 
-For a Node.js project:
+flutter devices
 
-```bash
-npm install
-```
+Connect an Android phone with USB debugging enabled or start an Android emulator.
 
-**4. Configure the application**
+Step 5: Run the Application
 
-Set up any required API keys, environment variables, models, or configuration files according to your implementation.
+flutter run
 
-**5. Run the application**
+The application will be built and launched on the selected device.
 
-Use the appropriate startup command for your project's entry point. For example:
+## 💻 Terminal Commands Reference
 
-```bash
-python app.py
-```
+The following commands are useful for development, testing, troubleshooting, and preparing the final Android application.
 
-Or, for a Node.js project:
+1. Check Flutter Installation
 
-```bash
-npm run dev
-```
+flutter doctor -v
 
-*Note: The dependency installation and startup commands above are alternatives for different project types. Use only the commands that match the files in your repository.*
+Purpose: Checks the Flutter development environment, Android SDK, and other required tools.
+
+Where to run: PowerShell or VS Code terminal.
+
+2. Open the Project Folder
+
+cd C:\src\smart_navigation
+
+Purpose: Moves the terminal to the project directory.
+
+Where to run: PowerShell or VS Code terminal.
+
+Note: Replace the example path with the actual location of the cloned project if necessary.
+
+3. Download Project Dependencies
+
+flutter pub get
+
+Purpose: Downloads the packages required by the project.
+
+Where to run: Inside the project folder.
+
+4. Clean Previous Build Files
+
+flutter clean
+
+Purpose: Removes generated build files to help resolve stale-build and compilation issues.
+
+Where to run: Inside the project folder.
+
+5. Analyze the Source Code
+
+flutter analyze
+
+Purpose: Identifies Dart code errors, warnings, and potential quality issues.
+
+Where to run: Inside the project folder.
+
+6. Run Automated Tests
+
+flutter test
+
+Purpose: Executes the automated tests available in the project.
+
+Where to run: Inside the project folder.
+
+7. Check Connected Devices
+
+flutter devices
+
+Purpose: Lists the Android phones, emulators, and other devices available to Flutter.
+
+Where to run: PowerShell or VS Code terminal.
+
+8. Run the Application in Debug Mode
+
+flutter run
+
+Purpose: Builds and launches the application for development and debugging.
+
+Where to run: Inside the project folder.
+
+9. Run the Application in Release Mode
+
+flutter run --release
+
+Purpose: Runs the application in release mode to evaluate its performance on a target device.
+
+Where to run: Inside the project folder, with a compatible device connected.
+
+10. Build the Release APK
+
+flutter build apk --release
+
+Purpose: Generates an installable Android APK for distribution and testing.
+
+Where to run: Inside the project folder.
+
+Output location:
+
+build/app/outputs/flutter-apk/app-release.apk
+
+11. Check Android Devices Using ADB
+
+adb devices
+
+Purpose: Checks whether Android Debug Bridge can communicate with connected Android devices.
+
+Where to run: PowerShell or VS Code terminal.
+
+12. Install or Update the APK
+
+adb install -r "build/app/outputs/flutter-apk/app-release.apk"
+
+Purpose: Installs the generated APK or reinstalls it over an existing version.
+
+Where to run: Inside the project folder, after building the APK.
+
+13. Build Separate APKs for Different CPU Architectures
+
+flutter build apk --split-per-abi --release
+
+Purpose: Generates architecture-specific APKs that can reduce download size for compatible devices.
+
+Where to run: Inside the project folder.
+
+Output location:
+
+build/app/outputs/flutter-apk/
+
+14. Build an Android App Bundle
+
+flutter build appbundle --release
+
+Purpose: Generates an Android App Bundle for publishing through Google Play.
+
+Where to run: Inside the project folder.
+
+Output location:
+
+build/app/outputs/bundle/release/app-release.aab
+
+## 🚀 Recommended Build Sequence
+
+Run the following commands in order to prepare a fresh release build.
+
+flutter clean
+flutter pub get
+flutter analyze
+flutter test
+flutter devices
+flutter build apk --release
+
+After the build succeeds, connect your Android phone and verify the connection:
+
+adb devices
+
+Install the generated APK:
+
+adb install -r "build/app/outputs/flutter-apk/app-release.apk"
+
+## 🔐 Permissions
+
+Depending on the features implemented, the application may require Android permissions for:
+
+Camera access
+
+Microphone access
+
+Location services
+
+Internet connectivity
+
+Vibration
+
+Ensure that the required permissions are declared in the Android configuration and requested appropriately at runtime. Actual permissions depend on the project's implementation.
 
 ## 🧪 Testing
 
