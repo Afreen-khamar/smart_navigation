@@ -69,21 +69,21 @@ These components work together to provide an accessible navigation experience.
 
 Before running the project, install the following:
 
-Flutter SDK
-
-Dart SDK (included with Flutter)
-
-Android Studio or Visual Studio Code
-
-Android SDK and platform tools
-
-Git
-
-An Android phone or emulator
-
-Verify the Flutter installation:
-
-flutter doctor -v
+    Flutter SDK
+    
+    Dart SDK (included with Flutter)
+    
+    Android Studio or Visual Studio Code
+    
+    Android SDK and platform tools
+    
+    Git
+    
+    An Android phone or emulator
+    
+    Verify the Flutter installation:
+    
+    flutter doctor -v
 
 Resolve the relevant setup issues reported by Flutter before proceeding.
 
@@ -95,23 +95,23 @@ git clone https://github.com/Afreen-khamar/smart_navigation.git
 
 Step 2: Open the Project Folder
 
-cd smart_navigation
+  cd smart_navigation
 
 Step 3: Download Dependencies
 
-flutter pub get
-
-This command downloads the dependencies specified in pubspec.yaml.
+  flutter pub get
+  
+  This command downloads the dependencies specified in pubspec.yaml.
 
 Step 4: Check Connected Devices
 
-flutter devices
-
-Connect an Android phone with USB debugging enabled or start an Android emulator.
+  flutter devices
+  
+  Connect an Android phone with USB debugging enabled or start an Android emulator.
 
 Step 5: Run the Application
 
-flutter run
+  flutter run
 
 The application will be built and launched on the selected device.
 
@@ -121,164 +121,95 @@ The following commands are useful for development, testing, troubleshooting, and
 
 1. Check Flutter Installation
 
-flutter doctor -v
-
-Purpose: Checks the Flutter development environment, Android SDK, and other required tools.
-
-Where to run: PowerShell or VS Code terminal.
+  flutter doctor -v
 
 2. Open the Project Folder
 
-cd C:\src\smart_navigation
-
-Purpose: Moves the terminal to the project directory.
-
-Where to run: PowerShell or VS Code terminal.
-
-Note: Replace the example path with the actual location of the cloned project if necessary.
+  cd C:\src\smart_navigation
 
 3. Download Project Dependencies
 
-flutter pub get
-
-Purpose: Downloads the packages required by the project.
-
-Where to run: Inside the project folder.
+  flutter pub get
 
 4. Clean Previous Build Files
 
-flutter clean
-
-Purpose: Removes generated build files to help resolve stale-build and compilation issues.
-
-Where to run: Inside the project folder.
+  flutter clean
 
 5. Analyze the Source Code
 
-flutter analyze
-
-Purpose: Identifies Dart code errors, warnings, and potential quality issues.
-
-Where to run: Inside the project folder.
+  flutter analyze
 
 6. Run Automated Tests
 
-flutter test
-
-Purpose: Executes the automated tests available in the project.
-
-Where to run: Inside the project folder.
+  flutter test
 
 7. Check Connected Devices
 
-flutter devices
-
-Purpose: Lists the Android phones, emulators, and other devices available to Flutter.
-
-Where to run: PowerShell or VS Code terminal.
+  flutter devices
 
 8. Run the Application in Debug Mode
 
-flutter run
-
-Purpose: Builds and launches the application for development and debugging.
-
-Where to run: Inside the project folder.
+  flutter run
 
 9. Run the Application in Release Mode
 
-flutter run --release
-
-Purpose: Runs the application in release mode to evaluate its performance on a target device.
-
-Where to run: Inside the project folder, with a compatible device connected.
+  flutter run --release
 
 10. Build the Release APK
 
-flutter build apk --release
-
-Purpose: Generates an installable Android APK for distribution and testing.
-
-Where to run: Inside the project folder.
-
-Output location:
-
-build/app/outputs/flutter-apk/app-release.apk
+  flutter build apk --release
 
 11. Check Android Devices Using ADB
 
-adb devices
-
-Purpose: Checks whether Android Debug Bridge can communicate with connected Android devices.
-
-Where to run: PowerShell or VS Code terminal.
+  adb devices
 
 12. Install or Update the APK
 
-adb install -r "build/app/outputs/flutter-apk/app-release.apk"
-
-Purpose: Installs the generated APK or reinstalls it over an existing version.
-
-Where to run: Inside the project folder, after building the APK.
+  adb install -r "build/app/outputs/flutter-apk/app-release.apk"
 
 13. Build Separate APKs for Different CPU Architectures
 
-flutter build apk --split-per-abi --release
-
-Purpose: Generates architecture-specific APKs that can reduce download size for compatible devices.
-
-Where to run: Inside the project folder.
-
-Output location:
-
-build/app/outputs/flutter-apk/
+  flutter build apk --split-per-abi --release
 
 14. Build an Android App Bundle
 
-flutter build appbundle --release
+  flutter build appbundle --release
 
-Purpose: Generates an Android App Bundle for publishing through Google Play.
-
-Where to run: Inside the project folder.
-
-Output location:
-
-build/app/outputs/bundle/release/app-release.aab
 
 ## 🚀 Recommended Build Sequence
 
-Run the following commands in order to prepare a fresh release build.
+    Run the following commands in order to prepare a fresh release build.
+    
+    flutter clean
+    flutter pub get
+    flutter analyze
+    flutter test
+    flutter devices
+    flutter build apk --release
+    
+    After the build succeeds, connect your Android phone and verify the connection:
+    
+    adb devices
+    
+    Install the generated APK:
 
-flutter clean
-flutter pub get
-flutter analyze
-flutter test
-flutter devices
-flutter build apk --release
-
-After the build succeeds, connect your Android phone and verify the connection:
-
-adb devices
-
-Install the generated APK:
-
-adb install -r "build/app/outputs/flutter-apk/app-release.apk"
+    adb install -r "build/app/outputs/flutter-apk/app-release.apk"
 
 ## 🔐 Permissions
 
-Depending on the features implemented, the application may require Android permissions for:
-
-Camera access
-
-Microphone access
-
-Location services
-
-Internet connectivity
-
-Vibration
-
-Ensure that the required permissions are declared in the Android configuration and requested appropriately at runtime. Actual permissions depend on the project's implementation.
+  Depending on the features implemented, the application may require Android permissions for:
+  
+    Camera access
+    
+    Microphone access
+    
+    Location services
+    
+    Internet connectivity
+    
+    Vibration
+  
+  Ensure that the required permissions are declared in the Android configuration and requested appropriately at runtime. Actual permissions depend on the project's implementation.
 
 ## 🧪 Testing
 
